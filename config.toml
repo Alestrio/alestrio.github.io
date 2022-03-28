@@ -1,4 +1,4 @@
-baseURL = 'https://alestrio.github.io/'
+baseURL = 'https://www.alexislebel.fr/'
 languageCode = 'fr-fr'
 title = 'Alestrio'
 theme="blist"
