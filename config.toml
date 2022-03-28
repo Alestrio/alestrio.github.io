@@ -13,7 +13,7 @@ DefaultContentLanguageInSubdir = true
     [languages.en.params]
       introTitle = "Hey! I'm Katheryn Fox"
       introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
-      introPhoto = "/static/img/pp.jpg"
+      introPhoto = "/images/pp.jpg"
       logo = "/blist-logo.png"
     [[languages.en.menu.main]]
         name = "Blog"
