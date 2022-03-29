@@ -13,7 +13,7 @@ DefaultContentLanguageInSubdir = true
     [languages.en.params]
       introTitle = "Hey! I'm Alexis LEBEl"
       introSubtitle = "19 y/o - aspirant engineering student !"
-      introPhoto = "/images/bitmoji.jpg"
+      introPhoto = "/images/bitmoji.jpeg"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
