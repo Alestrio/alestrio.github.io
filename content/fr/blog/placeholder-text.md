@@ -1,7 +1,7 @@
 ---
 author: "Hugo Authors"
 title: "Platzhaltertext"
-date: 2021-07-13
+date: 2020-07-13
 description: "Lorem Ipsum Dolor Si Amet DE"
 tags: ["markdown", "text"]
 thumbnail: /blog-post.jpg

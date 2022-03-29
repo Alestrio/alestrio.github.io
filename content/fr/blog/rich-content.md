@@ -1,7 +1,7 @@
 ---
 author: "Hugo Authors"
 title: "Reichhaltiger Inhalt"
-date: 2021-07-13
+date: 2020-07-13
 description: "Eine kurze Beschreibung von Hugo Shortcodes"
 tags: ["shortcodes", "privacy"]
 thumbnail: https://picsum.photos/id/1002/400/250
