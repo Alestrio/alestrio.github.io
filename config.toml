@@ -14,7 +14,6 @@ DefaultContentLanguageInSubdir = true
       introTitle = "Hey! I'm Alexis LEBEl"
       introSubtitle = "19 y/o - aspirant engineering student !"
       introPhoto = "/images/pp.jpg"
-      logo = "/images/bitmoji.jpeg"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
@@ -45,7 +44,6 @@ DefaultContentLanguageInSubdir = true
       introTitle = "Bonjour ! Je suis Alexis LEBEL"
       introSubtitle = "Un futur étudiant-ingénieur de 19 ans"
       introPhoto = "/images/pp.jpg"
-      logo = "/images/bitmoji.jpeg"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
