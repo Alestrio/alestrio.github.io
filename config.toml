@@ -11,7 +11,7 @@ DefaultContentLanguageInSubdir = true
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Hey! I'm Alexis LEBEl"
+      introTitle = "Hey! I'm Alexis LEBEL"
       introSubtitle = "19 y/o - aspirant engineering student !"
       introPhoto = "/images/bitmoji.jpeg"
     [[languages.en.menu.main]]
@@ -64,7 +64,7 @@ DefaultContentLanguageInSubdir = true
   darkModeToggle = true
   
   # Enable search in header
-  enableSearch = true
+  enableSearch = false
 
   # Custom copyright - optional
   copyright = "Copyright © 2022 - Alexis LEBEL · All rights reserved"
@@ -82,13 +82,9 @@ DefaultContentLanguageInSubdir = true
   # Global params xommon for both languages
   title = "Follow me"
   description = "I work on everything coding and tweet developer memes"
-  twitter = "https://twitter.com/"
-  linkedin = "https://linkedin.com/in/"
-  xing = "https://www.xing.com/profile/"
-  github = "https://github.com/"
-  medium = "https://medium.com/"
-  reddit = "https://reddit.com/"
-  dribbble = "https://dribbble.com/"
+  twitter = "https://twitter.com/Alestrio0"
+  linkedin = "https://www.linkedin.com/in/alexis-lebel/"
+  github = "https://github.com/Alestrio"
 
 [[menu.main]]
   name = "About"
