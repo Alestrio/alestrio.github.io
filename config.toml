@@ -11,8 +11,8 @@ DefaultContentLanguageInSubdir = true
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Hey! I'm Katheryn Fox"
-      introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
+      introTitle = "Hey! I'm Alexis LEBEl"
+      introSubtitle = "19 y/o - aspirant engineering student !"
       introPhoto = "/images/pp.jpg"
       logo = "/blist-logo.png"
     [[languages.en.menu.main]]
