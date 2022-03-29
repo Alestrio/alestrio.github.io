@@ -43,7 +43,7 @@ DefaultContentLanguageInSubdir = true
     [languages.fr.params]
       introTitle = "Bonjour ! Je suis Alexis LEBEL"
       introSubtitle = "Un futur étudiant-ingénieur de 19 ans"
-      introPhoto = "/images/bitmoji.jpg"
+      introPhoto = "/images/bitmoji.jpeg"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
