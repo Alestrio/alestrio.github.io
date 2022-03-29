@@ -127,25 +127,26 @@ Bon là, pas de surprise, on va faire un ajout d’appareil classique sur l’ap
 Explication en images
 Voici la liste d’instruction pour ajouter notre appareil :
 
-Aller dans l’onglet “Plus”
-Aller dans “Ajouter un appareil”
-Choisir “Autre”
-Cliquer sur “Découvrir des appareils”
-Ajouter l’appareil nommé “Tasmota” par défaut
-Le renommer dans l’application Alexa
+>Aller dans l’onglet **“Plus”** \
+Aller dans **“Ajouter un appareil”** \
+Choisir **“Autre”** \
+Cliquer sur **“Découvrir des appareils”** \
+Ajouter l’appareil nommé **“Tasmota”** par défaut \
+Le renommer dans l’application Alexa \
+
 Maintenant, vous pouvez dire à Alexa “Alexa, ouvre le portail”. Cela permet d’ouvrir mais aussi de fermer le portail. Nous allons créer la routine “Alexa, ferme le portail” afin que cela soit plus intuitif :
 
 Voici la liste d’instructions pour ajouter la routine :
 
->Aller dans **“Plus”**
-Cliquer sur **“Routines”**
-Appuyer sur le Plus, en haut à droite pour ajouter une routine
-Mettre **“Voix”** comme déclencheur
-Écrire la phrase à dire
-Cliquer sur **“Ajouter une action”**
-Sélectionnez l’appareil
-Le mettre en **“marche”**
-Sauvegarder et quitter
+>Aller dans **“Plus”** \
+Cliquer sur **“Routines”** \
+Appuyer sur le Plus, en haut à droite pour ajouter une routine \
+Mettre **“Voix”** comme déclencheur \
+Écrire la phrase à dire \
+Cliquer sur **“Ajouter une action”** \
+Sélectionnez l’appareil \
+Le mettre en **“marche”** \
+Sauvegarder et quitter \
 
 # Conclusion
 
