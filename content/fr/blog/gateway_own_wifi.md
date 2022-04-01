@@ -1,7 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "Mettre en place une passerelle pour contourner les restrictions de nombre d’appareils sur un réseau public"
-date: 2021-12-01
+date: 2020-12-01
 tags: ["IoT", "wifi", "gateway", "privacy"]
 #thumbnail: /images/2020/12/automate_1.jpg
 ---

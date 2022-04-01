@@ -1,7 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "Introduction à la crypto-monnaie"
-date: 2021-12-01
+date: 2020-11-18
 tags: ["crypto", "blockchain"]
 #thumbnail: /images/2020/12/automate_1.jpg
 ---

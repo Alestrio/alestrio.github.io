@@ -1,7 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "Comment avoir une radio synchronisée sur plusieurs postes"
-date: 2021-12-01
+date: 2020-11-04
 tags: ["synchro", "radio", "icecast"]
 #thumbnail: /images/2020/12/automate_1.jpg
 ---
