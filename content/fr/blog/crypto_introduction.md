@@ -3,7 +3,7 @@ author: "Alexis LEBEL"
 title: "Introduction à la crypto-monnaie"
 date: 2020-11-18
 tags: ["crypto", "blockchain"]
-thumbnail: /images/2020/09/blockchain_explanation.png
+thumbnail: /images/2020/11/btc.png
 ---
 
 Imaginez : dans un monde où l’argent est crucial, et où la perte ou le gain de celui-ci peut changer votre vie pour le meilleur… ou pour le pire. Dans ce monde, il existe des entreprises, qui se chargent de garder votre argent, une solution soi-disant plus fiable que de le planquer sous le lit. Ces mêmes entreprises, prêtent cet argent, que vous leur avez confié, que vous avez gagné. Et ces mêmes entreprises, si elles coulent, emportent ces capitaux, ainsi que votre vie dans leur chute.
