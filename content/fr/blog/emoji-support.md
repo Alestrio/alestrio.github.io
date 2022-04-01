@@ -3,6 +3,7 @@ author: "Hugo Authors"
 title: "Emoji-Unterstützung"
 date: 2020-07-15
 lastmod: 2020-10-14
+draft: true
 description: "Anleitung zur Verwendung von Emojis in Hugo"
 tags: ["emoji"]
 thumbnail: https://picsum.photos/id/1050/400/250

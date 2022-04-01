@@ -4,6 +4,7 @@ title: "Markdown Syntax Guide"
 description: "Beispielartikel, der die grundlegende Markdown-Syntax und Formatierung für HTML-Elemente zeigt."
 tags: ["markdown", "css", "html"]
 date: 2020-07-14
+draft: true
 thumbnail: https://picsum.photos/id/1019/500/200
 ---
 
