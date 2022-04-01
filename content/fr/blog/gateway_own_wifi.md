@@ -27,7 +27,7 @@ Tout d’abord, nous allons nous connecter au WiFI. Il vous faudra donc faire la
 
 `nmtui`
 
-![image](/images/2020/11/image.jpg)
+![image](/images/2020/11/image.png)
 
 Vous vous retrouverez avec cette “fenêtre”. Il faut ensuite aller dans “Activer une connexion” puis vous connecter au réseau public de votre choix.
 
