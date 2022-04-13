@@ -3,7 +3,6 @@ author: "Alexis LEBEL"
 title: "Bookeen Notéa Review"
 date: 2020-04-13
 tags: ["Bookeen", "Notéa", "review", "e-reader", "e-ink", "digital notebook"]
-draft: false
 thumbnail: /images/2022/04/bookeen_notea.jpg
 ---
 
