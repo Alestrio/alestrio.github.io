@@ -29,6 +29,6 @@ Afin de partager mes **découvertes** et mes aventures dans le monde du numériq
 
 Ce site est d'ailleurs un de mes **projets personnels**. Il n'est pas alimenté de mon côté par du HTML, mais par du **Markdown** et met à profit des compétences systèmes et DevOps !
 
-Afin de retrouver ces projets personnels, vous pouvez me suivre sur **GitHub** : [Alestrio](github.com/alestrio)
+Afin de retrouver ces projets personnels, vous pouvez me suivre sur **GitHub** : [Alestrio](https://github.com/alestrio)
 
 Alexis LEBEL

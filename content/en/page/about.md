@@ -29,6 +29,6 @@ In order to share my **discoveries** and my adventures in the digital world, I r
 
 This website is one of my **personal projects**. It is not powered by HTML, but by **Markdown** and uses system and DevOps skills!
 
-To discover these personal projects, you can follow me on **GitHub** : [Alestrio](github.com/alestrio)
+To discover these personal projects, you can follow me on **GitHub** : [Alestrio](https://github.com/alestrio)
 
 Alexis LEBEL
