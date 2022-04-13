@@ -1,26 +1,34 @@
 ---
-author: Katheryn Fox
-title: Über mich
+author: Alexis LEBEL
+title: A propos de moi
 date: 2021-07-15
 description:
 keywords: ["about-us", "about-hugo", "contact"]
 type: about
 ---
 
-Hugo wurde in Go geschrieben und ist ein Open-Source-Generator für statische Sites, der unter der [Apache License 2.0.] (https://github.com/gohugoio/hugo/blob/master/LICENSE) verfügbar ist. Hugo unterstützt TOML-, YAML- und JSON-Datendateitypen , Markdown- und HTML-Inhaltsdateien und verwendet Shortcodes, um Rich Content hinzuzufügen. Andere bemerkenswerte Funktionen sind Taxonomien, mehrsprachiger Modus, Bildverarbeitung, benutzerdefinierte Ausgabeformate, HTML/CSS/JS-Minifizierung und Unterstützung für Sass SCSS-Workflows.
+**Passion et curiosité, deux mots qui définissent mon style de vie.**
+----
 
-Hugo nutzt eine Vielzahl von Open-Source-Projekten, darunter:
 
-- https://github.com/yuin/goldmark
-- https://github.com/alecthomas/chroma
-- https://github.com/muesli/smartcrop
-- https://github.com/spf13/cobra
-- https://github.com/spf13/viper
+Originaire des **Ardennes**, j'ai depuis toujours été très curieux du monde de la technique. Cela m'a ammené assez jeune à découvrir le monde du numérique, et de la **programmation**. Mon premier langage, celui qui m'a fait découvrir l'algorithmie et la manière de coder, est le **Java**.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+Dans un lycée sedanais, j'ai obtenu un bac S - Sciences de l'Ingénieur, qui m'a permis de satisfaire ma curiosité technique, au travers des enseignements de **mécanique, électrotechnique et informatique**.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+J'ai ensuite étudié les réseaux et les sciences des télécommunication à l'IUT de Châlons-en-Champagne. \
+J'ai pu y acquérir énormément de compétences **réseau**, des architectures de base, jusqu'aux réseaux opérateurs (MPLS, BGP, MP-BGP, VPN-MPLS). \
+J'y ai aussi acquis des compétences en **programmation**, très orientée système (Python, Powershell..), mais aussi orientée **application moderne**, avec de la programmation d'APIs (Python). \
+A ces compétences, s'ajoutent les compétences **système**, à travers la maîtrise de différents services (NGINX, Bind9, Apache, PostgreSQL...) mais aussi de différentes **technologies**, comme la **conteneurisation**, la **virtualisation**, et la **supervision**. \
+Enfin, j'ai acquis des outils de traitement du signal numérique, et quelques notions d'électronique.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+Cette année, je projette d'intégrer en alternance l'**UTC**, une grande école d'ingénieurs à Compiègne, dans le but de me perfectionner dans des domaines orientés système et intelligence artificielle.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Je suis passionné par la cryptomonnaie et la **blockchain**, et je pense que les applications que nous en avons aujourd'hui, sont infimes, par rapport au potentiel énorme de cette technologie.
+
+Afin de partager mes **découvertes** et mes aventures dans le monde du numérique, je tiens ce blog, qui me sert aussi de site internet personnel.
+
+Ce site est d'ailleurs un de mes **projets personnels**. Il n'est pas alimenté de mon côté par du HTML, mais par du **Markdown** et met à profit des compétences systèmes et DevOps !
+
+Afin de retrouver ces projets personnels, vous pouvez me suivre sur **GitHub** : [Alestrio](github.com/alestrio)
+
+Alexis LEBEL
