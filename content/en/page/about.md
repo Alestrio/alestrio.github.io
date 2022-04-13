@@ -1,7 +1,7 @@
 ---
 author: Alexis LEBEL
 title: About me
-date: 2021-07-15
+date: 2022-04-13
 description:
 keywords: ["about-us", "about-hugo", "contact"]
 type: about
