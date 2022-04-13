@@ -81,7 +81,7 @@ DefaultContentLanguageInSubdir = true
 [params.homepage.social]
   # Global params xommon for both languages
   title = "Follow me"
-  description = "I work on everything coding and tweet developer memes"
+  description = "System/backend-oriented developper"
   twitter = "https://twitter.com/Alestrio0"
   linkedin = "https://www.linkedin.com/in/alexis-lebel/"
   github = "https://github.com/Alestrio"
