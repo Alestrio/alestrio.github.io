@@ -1,7 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "Retour sur expérience : Bookeen Notéa"
-date: 2020-04-13
+date: 2022-04-13
 tags: ["Bookeen", "Notéa", "review", "e-reader", "e-ink", "digital notebook"]
 thumbnail: /images/2022/04/bookeen_notea.jpg
 ---

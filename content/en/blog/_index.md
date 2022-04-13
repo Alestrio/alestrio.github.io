@@ -1,6 +1,4 @@
 ---
-author: Katheryn Fox
+author: Alexis LEBEL
 title: Blog
 ---
-
-Hello
