@@ -6,14 +6,15 @@ tags: ["static", "github", "hugo", "website"]
 thumbnail: /images/2022/04/github_actions.jpg
 ---
 
-During the last two years, I studied Networks and Telecommunications at the IUT of Châlons-en-Champagne.
-Among the skills I acquired, there are, of course, technical skills but also communication skills.
+During the last two years, I studied Networks and Telecommunications at the IUT of Châlons-en-Champagne. Among the skills I acquired, there are, of course, technical skills but also communication skills.
 
-During my third year project, I was asked to replace the traditional paper project report by a static website, whose vocation was also to serve as a documentation of the project production. 
+During my third year project, I was asked to replace the traditional paper project report by a static website, whose vocation was also to serve as a documentation of the project production.
 
-In this kind of case, to get a message across, it's not enough to make an ultra well done website, with animations everywhere but very heavy. It is more effective to focus on sobriety and simplicity, so that the information is easy to find.
+In this case, to convey a message, it's not the point to make an ultra well done website, with animations everywhere but very heavy. It is more effective to focus on sobriety and simplicity, so that the information is easy to find.
 
-Moreover, when you write this information over a long period of time, and it will evolve, it is unthinkable to start with classic code (HTML/CSS/JS), which would be too long to feed.
+Moreover, when we write this information over a long period of time, and which is bound to evolve, it is unthinkable to start with classic code (HTML/CSS/JS), which would be too long to feed.
+
+Translated with www.DeepL.com/Translator (free version)
 
 # Static site generators
 
