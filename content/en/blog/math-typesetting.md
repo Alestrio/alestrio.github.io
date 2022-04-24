@@ -4,6 +4,7 @@ title: Math Typesetting
 date: 2021-07-14
 description: A brief guide to setup KaTeX
 math: true
+draft: true
 thumbnail: https://picsum.photos/id/1015/400/250
 ---
 
