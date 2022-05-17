@@ -14,8 +14,6 @@ In this case, to convey a message, it's not the point to make an ultra well done
 
 Moreover, when we write this information over a long period of time, and which is bound to evolve, it is unthinkable to start with classic code (HTML/CSS/JS), which would be too long to feed.
 
-Translated with www.DeepL.com/Translator (free version)
-
 # Static site generators
 
 Static site generators are tools that allow you to create static web sites, i.e. without background communication with a server to provide data. 
