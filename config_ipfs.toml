@@ -1,0 +1,105 @@
+baseURL = 'https://ipfs.alexislebel.fr/'
+languageCode = 'fr-fr'
+title = 'Alestrio'
+theme="blist2"
+
+DefaultContentLanguage = "fr"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "Hey! I'm Alexis LEBEL"
+      introSubtitle = "19 y/o - aspirant engineering student !"
+      introPhoto = "/images/bitmoji.jpeg"
+    [[languages.en.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+
+    [[languages.en.menu.main]]
+        name = "About"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 3
+
+    [[languages.en.menu.main]]
+        name = "Top Post"
+        url = "/en/blog/connect-gate/"
+        weight = 4
+
+  [languages.fr]
+    contentDir = "content/fr" 
+    weight = 2
+    languageName = "Français"
+    title = "Alestrio"
+    description = "Think, Tinker, Watch it working !"
+    [languages.fr.params]
+      introTitle = "Bonjour ! Je suis Alexis LEBEL"
+      introSubtitle = "Un futur étudiant-ingénieur de 19 ans"
+      introPhoto = "/images/bitmoji.jpeg"
+    [[languages.fr.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+
+    [[languages.fr.menu.main]]
+        name = "A propos de moi"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.fr.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 3
+
+[params]
+  # Enable the darkmode toggle in heafrr
+  darkModeToggle = true
+  
+  # Enable search in header
+  enableSearch = false
+
+  # Custom copyright - optional
+  copyright = "Copyright © 2022 - Alexis LEBEL · All rights reserved"
+  favicon = "/favicon.svg"
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  ascentColor = "bg-blue-200"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
+[params.homepage.social]
+  # Global params xommon for both languages
+  title = "Follow me"
+  description = "System/backend-oriented developper"
+  twitter = "https://twitter.com/Alestrio0"
+  linkedin = "https://www.linkedin.com/in/alexis-lebel/"
+  github = "https://github.com/Alestrio"
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
