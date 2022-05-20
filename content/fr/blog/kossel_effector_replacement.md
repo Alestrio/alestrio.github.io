@@ -42,7 +42,7 @@ Kit de liaison magnétique:
 
 Tubes en téflon + raccords (pneufits)
 
-![Tubes en téflon + raccords](/images/2020/06/pneu_ptfe.jpg)
+![Tubes en téflon + raccords](/images/2020/06/pneu-ptfe.jpg)
 
 # Assemblage de l’effecteur
 
@@ -59,7 +59,7 @@ Avec tout ça, l’effecteur ressemble donc à ça :
 
 Bon, tout d’abord, après avoir branché le tout, j’ai commencé par tester la chauffe de la tête. Malheureusement, j’utilisais un clone chinois très mauvais d’E3D V6, et le heatbreak (pièce qui sert d’isolation thermique entre le bloc de chauffe et le refroidisseur, et aussi de guide pour le filament) et la buse étaient une seule et même pièce, qui plus est sans espace d’isolation thermique entre les deux parties de la tête. La conséquence ? La tête chauffait, mais une trop grande partie de la chaleur était dissipée par le refroidisseur.
 
-![E3D V6](/images/2020/06/v6.jpg)
+![E3D V6](/images/2020/06/v6.png)
 
  J’ai donc acheté des heatbreak plus conventionnels ainsi qu’une buse, et le problème était réglé !
 
