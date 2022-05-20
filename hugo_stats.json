@@ -44,8 +44,8 @@
     "classes": [
       "absolute",
       "active",
-      "bg-blue-200",
       "bg-gray-100",
+      "bg-indigo-300",
       "bg-white",
       "border",
       "border-transparent",
