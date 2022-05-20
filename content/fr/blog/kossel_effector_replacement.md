@@ -20,7 +20,7 @@ Un switch mécanique : afin de remplacer mon système de capteur inductif pour l
 Une fixation magnétique : afin de réduire les jeux au niveau des liaisons et de pouvoir détacher l’ensemble facilement
 Je me suis donc tourné vers ce genre de produit :
 
-![Effecteur AliExpress](/images/2020/06/effecteur_ali.webp)
+![Effecteur AliExpress](/images/2020/06/effector_ali.webp)
 
 
 Qui avait plusieurs avantages :
