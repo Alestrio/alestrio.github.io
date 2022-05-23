@@ -59,9 +59,14 @@ DefaultContentLanguageInSubdir = true
         url = "tags"
         weight = 3
     
-    [[languages.en.menu.main]]
+    [[languages.fr.menu.main]]
         name = "Dernier article"
         url = "/fr/blog/static_personnal_site/"
+        weight = 4
+
+    [[languages.fr.menu.main]]
+        name = "Mentions légales"
+        url = "page/legal"
         weight = 4
 
 [params]
