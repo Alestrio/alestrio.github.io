@@ -60,6 +60,7 @@ DefaultContentLanguageInSubdir = true
   
   # Enable search in header
   enableSearch = false
+  enableEmoji = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2022 - Alexis LEBEL · All rights reserved"
