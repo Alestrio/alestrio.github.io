@@ -4,7 +4,7 @@ title: "Connecter un portail électrique"
 date: 2021-01-01
 description: "Comment rendre un portail électrique connecté"
 tags: ["IoT"]
-thumbnail: /images/2020/12/automate_1c.jpg
+thumbnail: /images/2020/12/automate_1hc.jpg
 ---
 
 Bonjour à tous ! Pour ce premier article dans la série “Connecter sa maison” nous allons nous intéresser à la domotisation d’un portail électrique à télécommande. Nous allons pour cela utiliser un système fait maison, afin d’envoyer un signal à l’automate du portail, afin de commander son ouverture ou sa fermeture depuis un système vocal comme Alexa ou manuellement.
