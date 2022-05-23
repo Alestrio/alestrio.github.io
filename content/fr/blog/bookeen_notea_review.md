@@ -17,13 +17,13 @@ J'ai toujours voulu me débarasser de cette façon de faire, autant coûteuse en
 
 C'est à travers de publicités sur les réseaux sociaux que j'ai découvert le concept de "bloc-note" électronique, et forcément, vu ma relation avec le papier, j'ai tout de suite accroché.
 
-C'est donc après quelques recherches, que je suis tombé sur la Bookeen Notéa.
+C'est donc après quelques recherches, que je suis tombé sur la **Bookeen Notéa**.
 
 # Présentation
 
 ## Présentation technique
 
-La Notéa se présente sous la forme d'une tablette sous Android 8.1, avec un écran E-Ink de 10.3". La technologie utilisé pour la prise de note est le Wacom EMR, qui permet de reconnaître des niveaux de pression différents avec le stylo Wacom fourni.
+La Notéa se présente sous la forme d'une tablette sous Android 8.1, avec un écran E-Ink de 10.3". La technologie utilisé pour la prise de note est le **Wacom EMR**, qui permet de reconnaître des niveaux de pression différents avec le stylo Wacom fourni.
 
 A l'intérieur, un processeur quadcore de 1.8GHz, 2Go de RAM, et 32 Go de stockage. Cela peut paraître peu, mais ce n'est pas une tablette de loisir, mais un outil de travail, c'est donc amplement adapté. On peut néanmoins admettre que ces caractéristiques sont bloquantes pour une évolutivité forte.
 
@@ -106,6 +106,6 @@ Après avoir testé cette nouvelle version pendant 3 semaines, je confirme que c
 # Conclusion
 
 Pour conclure, la Bookeen Notéa est un bloc-note numérique très pratique, qui permet de prendre des notes et de lire des livres simplement et sans utiliser de papier. \
-Elle a ses points négatifs, mais globalement, et saura se rendre utile, à ceux qui veulent se débarasser du papier, sans utiliser un écran aggressif pour les yeux.
+Elle a ses points négatifs, mais globalement, elle saura se rendre utile, à ceux qui veulent se débarasser du papier, sans utiliser un écran aggressif pour les yeux.
 
 Disponible chez [LDLC](https://www.ldlc.com/fiche/PB00463513.html)
