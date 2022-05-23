@@ -25,11 +25,6 @@ DefaultContentLanguageInSubdir = true
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Tags"
-        url = "tags"
-        weight = 3
-
-    [[languages.en.menu.main]]
         name = "Top Post"
         url = "/en/blog/static_personnal_site/"
         weight = 4
@@ -53,16 +48,6 @@ DefaultContentLanguageInSubdir = true
         name = "A propos de moi"
         url = "page/about/"
         weight = 2
-
-    [[languages.fr.menu.main]]
-        name = "Tags"
-        url = "tags"
-        weight = 3
-    
-    [[languages.fr.menu.main]]
-        name = "Dernier article"
-        url = "/fr/blog/static_personnal_site/"
-        weight = 4
 
     [[languages.fr.menu.main]]
         name = "Mentions légales"

@@ -25,13 +25,8 @@ DefaultContentLanguageInSubdir = true
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Tags"
-        url = "tags"
-        weight = 3
-
-    [[languages.en.menu.main]]
         name = "Top Post"
-        url = "/en/blog/connect-gate/"
+        url = "/en/blog/static_personnal_site/"
         weight = 4
 
   [languages.fr]
@@ -55,9 +50,9 @@ DefaultContentLanguageInSubdir = true
         weight = 2
 
     [[languages.fr.menu.main]]
-        name = "Tags"
-        url = "tags"
-        weight = 3
+        name = "Mentions légales"
+        url = "page/legal"
+        weight = 4
 
 [params]
   # Enable the darkmode toggle in heafrr
@@ -73,15 +68,15 @@ DefaultContentLanguageInSubdir = true
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
   # Reference: https://tailwindcss.com/docs/customizing-colors
-  ascentColor = "bg-blue-200"
+  ascentColor = "bg-indigo-300"
 
   # The page bundle that is shown on the front page
   frontBundle = "blog"
 
 [params.homepage.social]
-  # Global params xommon for both languages
+  # Global params common for both languages
   title = "Follow me"
-  description = "System/backend-oriented developper"
+  description = "Passion-driven engineering student"
   twitter = "https://twitter.com/Alestrio0"
   linkedin = "https://www.linkedin.com/in/alexis-lebel/"
   github = "https://github.com/Alestrio"
