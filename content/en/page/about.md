@@ -21,7 +21,7 @@ I also acquired **programming** skills, highly system-oriented (Python, Powershe
 In addition to these skills, there are **system** skills, through the expertise of various services (NGINX, Bind9, Apache, PostgreSQL...) but also of various **technologies**, such as **containerization**, **virtualization**, and **supervision**. \
 Finally, I have acquired some digital signal processing tools, and some electronics notions.
 
-This year, I plan to join the **UTC**, an engineering school in Compiègne, in order to improve myself in my system and artificial intelligence skills.
+This year, I joined the **UTC**, an engineering school in Compiègne, in order to improve myself in my system and artificial intelligence skills.
 
 I am interested in cryptocurrency and **blockchain**, and I think that the applications we have today are very small, compared to the huge potential of this technology.
 

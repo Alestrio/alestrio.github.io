@@ -21,7 +21,7 @@ J'y ai aussi acquis des compétences en **programmation**, très orientée syst�
 A ces compétences, s'ajoutent les compétences **système**, à travers la maîtrise de différents services (NGINX, Bind9, Apache, PostgreSQL...) mais aussi de différentes **technologies**, comme la **conteneurisation**, la **virtualisation**, et la **supervision**. \
 Enfin, j'ai acquis des outils de traitement du signal numérique, et quelques notions d'électronique.
 
-Cette année, je projette d'intégrer en alternance l'**UTC**, une grande école d'ingénieurs à Compiègne, dans le but de me perfectionner dans des domaines orientés système et intelligence artificielle.
+Cette année, j'ai integré en alternance l'**UTC**, une grande école d'ingénieurs à Compiègne, dans le but de me perfectionner dans des domaines orientés système et intelligence artificielle.
 
 Je suis passionné par la cryptomonnaie et la **blockchain**, et je pense que les applications que nous en avons aujourd'hui, sont infimes, par rapport au potentiel énorme de cette technologie.
 
