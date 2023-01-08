@@ -1,7 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "Low Level C and Assembly development environment with VSCode and WSL2"
-date: 2023-08-01
+date: 2023-01-08
 tags: ["VSCode", "WSL2", "MobaXTerm", "Assembly", "C", "Makefile"]
 thumbnail: /images/2023/01/dev_wsl2_header.png
 ---
