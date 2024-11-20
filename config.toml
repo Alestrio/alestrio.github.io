@@ -38,7 +38,7 @@ DefaultContentLanguageInSubdir = true
     [languages.fr.params]
       introTitle = "Bonjour ! Je suis Alexis"
       introSubtitle = "Ingénieur IoT dans l'industrie, mais surtout bidouilleur !"
-      introPhoto = "/images/bitmoji.jpeg"
+      introPhoto = "/images/pp.jpeg"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
