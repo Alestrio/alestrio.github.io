@@ -12,8 +12,8 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Hey! I'm Alexis LEBEL"
-      introSubtitle = "19 y/o - aspirant engineering student !"
-      introPhoto = "/images/bitmoji.jpeg"
+      introSubtitle = "2 y/o - IoT Engineer"
+      introPhoto = "/images/pp.jpeg"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
@@ -36,8 +36,8 @@ DefaultContentLanguageInSubdir = true
     title = "Alestrio"
     description = "Think, Tinker, Watch it working !"
     [languages.fr.params]
-      introTitle = "Bonjour ! Je suis Alexis LEBEL"
-      introSubtitle = "Un futur étudiant-ingénieur de 19 ans"
+      introTitle = "Bonjour ! Je suis Alexis"
+      introSubtitle = "Ingénieur IoT dans l'industrie, mais surtout bidouilleur !"
       introPhoto = "/images/bitmoji.jpeg"
     [[languages.fr.menu.main]]
         name = "Blog"
@@ -63,7 +63,7 @@ DefaultContentLanguageInSubdir = true
   enableEmoji = true
 
   # Custom copyright - optional
-  copyright = "Copyright © 2022 - Alexis LEBEL · All rights reserved"
+  copyright = "Copyright © 2025 - Alexis LEBEL · All rights reserved"
   favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
