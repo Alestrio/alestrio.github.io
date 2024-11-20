@@ -26,8 +26,8 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install PostCSS
-        run: npm install postcss postcss-cli
+      - name: Install PostCSS and plugins
+        run: npm install postcss postcss-cli postcss-import
 
       - name: Build
         run: hugo --minify
