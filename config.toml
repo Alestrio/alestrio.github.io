@@ -11,9 +11,9 @@ DefaultContentLanguageInSubdir = true
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Hey! I'm Alexis LEBEL"
-      introSubtitle = "2 y/o - IoT Engineer"
-      introPhoto = "/images/pp.jpeg"
+      introTitle = "Alexis LEBEL"
+      introSubtitle = "IoT Engineer, but mostly a tinkerer"
+      introPhoto = "/images/pp.jpg"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
@@ -36,9 +36,9 @@ DefaultContentLanguageInSubdir = true
     title = "Alestrio"
     description = "Think, Tinker, Watch it working !"
     [languages.fr.params]
-      introTitle = "Bonjour ! Je suis Alexis"
+      introTitle = "Alexis LEBEL"
       introSubtitle = "Ingénieur IoT dans l'industrie, mais surtout bidouilleur !"
-      introPhoto = "/images/pp.jpeg"
+      introPhoto = "/images/pp.jpg"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
