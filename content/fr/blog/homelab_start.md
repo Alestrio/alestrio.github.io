@@ -3,6 +3,7 @@ author: "Alexis LEBEL"
 title: "Homelab - How it started, how it's going"
 date: 2025-08-22
 tags: ["homelab", "proxmox", "fortigate", "sdn", "bgp", "ipsec"]
+thumbnail: /images/2025/08/homelab_background.jpg
 ---
 
 # Avant-propos
@@ -129,7 +130,6 @@ Le FGT est connecté au switch en utilisant deux liens 1GbE aggrégés en LACP, 
 
 ### Le réseau fédéré : Le Federated Git Network (FGN)
 
-> [!tip] 
 > La GitFamily est simplement un nom inventé de notre groupe d'amis, cela remonte à il y a quelques années, et c'est resté :)
 
 Et c'est là qu'avec 4 amis et anciens de l'IUT, nous avons eu une idée. C'est en fait ce que je qualifierai de bêtise, mais une bonne bêtise : et si on fédérait nos réseaux respectifs comme le font les opérateurs ?
