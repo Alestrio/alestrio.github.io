@@ -26,8 +26,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install PostCSS and plugins
-        run: npm install postcss postcss-cli postcss-import
+      - name: Install correct PostCSS versions and update Browserslist DB
+        run: |
+          npm install postcss@8 postcss-cli@9 postcss-import@15
+          npx browserslist@latest --update-db
 
       - name: Build
         run: hugo --minify
