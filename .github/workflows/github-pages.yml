@@ -39,5 +39,5 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./public
+          publish_dir: /root/actions-runner/_work/alestrio.github.io/alestrio.github.io/public
           force_orphan: true
