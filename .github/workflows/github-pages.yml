@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
 
 jobs:
   deploy:
@@ -26,33 +25,41 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install dependencies
         run: |
-          # Installer les dépendances si package.json existe
           if [ -f package.json ]; then
             npm ci || npm install
           fi
-          # Installer les dépendances PostCSS nécessaires pour Hugo
           npm install postcss postcss-cli postcss-import autoprefixer
 
-      - name: Update Browserslist DB
-        run: npx browserslist@latest --update-db
-
-      - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: hugo --gc --minify
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/master'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          allow_empty_commit: false
-          keep_files: false
-          force_orphan: true
+      - name: Build and Deploy
+        run: |
+          # Build Hugo
+          hugo --gc --minify
+          
+          # Vérifier que public existe
+          if [ ! -d "public" ]; then
+            echo "Erreur: Dossier public non trouvé après build Hugo"
+            exit 1
+          fi
+          
+          echo "=== Contenu généré par Hugo ==="
+          ls -la public/
+          
+          # Configuration git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Aller dans le dossier public
+          cd public
+          
+          # Initialiser git dans public
+          git init
+          git add .
+          git commit -m "Deploy from ${{ github.sha }}"
+          
+          # Push vers gh-pages en écrasant
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
+          
+          echo "✅ Site déployé vers gh-pages"
