@@ -1,43 +1,75 @@
-name: github pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Set a branch to deploy
+      - master
   pull_request:
 
+# Permissions nécessaires pour GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Éviter les déploiements simultanés
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.123.0'
+          hugo-version: '0.129.0'  # Version plus récente
           extended: true
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '18'  # Version LTS plus récente
 
-      - name: Install correct PostCSS versions and update Browserslist DB
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Install dependencies
         run: |
-          npm install postcss@8 postcss-cli@9 postcss-import@15
-          npx browserslist@latest --update-db
+          npm ci || npm install
 
-      - name: Build
-        run: hugo --minify
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/master'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.TOKEN }}
-          publish_dir: /root/actions-runner/_work/alestrio.github.io/alestrio.github.io/public
-          force_orphan: true
+          path: ./public
+
+  deploy:
+    # Déployer seulement sur la branche master
+    if: github.ref == 'refs/heads/master'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
