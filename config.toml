@@ -34,11 +34,11 @@ DefaultContentLanguageInSubdir = true
     weight = 2
     languageName = "Français"
     title = "Alestrio"
-    description = "Think, Tinker, Watch it working !"
     [languages.fr.params]
       introTitle = "Alexis LEBEL"
       introSubtitle = "Ingénieur IoT dans l'industrie, mais surtout bidouilleur !"
       introPhoto = "/images/pp.jpg"
+      description = "Think, Tinker, Watch it working !"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
