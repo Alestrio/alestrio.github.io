@@ -47,7 +47,7 @@ Cet article se propose de retracer mon chemin dans le monde du homelabbing, dans
 
 Tout a commencé quand je me suis retrouvé à mon compte, avec ma maison. Pendant mes années à l'UTC, et un peu après, j'ai loué une maison passoir thermique, chauffée à l'électricité. Le coût prohibitif de l'électricité (plus les crises qui l'ont d'autant fait monter) m'ont fait réfléchir à la façon d'optimiser le chauffage pour économiser.
 
-Ainsi, me voici avec mon Orange Pi Win Plus, un dongle ZigBee, un capteur de température, et des contrôleurs fil-pilote pour les chauffage. La concept était simple, en utilisant Home Assistant, je pilotais une température de consigne qui dépendais de ma présence dans la maison, et un contrôleur simple PID se chargeais d'atteindre cette température de consigne. J'ai ainsi amélioré mon confort thermique tout en économisant environ 300€ par ans (par rapport aux anciens locataires). Sur une facture de 2000€, c'est honorable. Et très vite, j'ai été pris par le virus.
+Ainsi, me voici avec mon Orange Pi Win Plus, un dongle ZigBee, un capteur de température, et des contrôleurs fil-pilote pour les chauffage. La concept était simple, en utilisant Home Assistant, je pilotais une température de consigne qui dépendais de ma présence dans la maison, et un contrôleur simple PID se chargeait d'atteindre cette température de consigne. J'ai ainsi amélioré mon confort thermique tout en économisant environ 300€ par ans (par rapport aux anciens locataires). Sur une facture de 2000€, c'est honorable. Et très vite, j'ai été pris par le virus.
 
 !["Une vue synthétique de ma consommation électrique cette année"](/images/2025/08/iBUNiMqIJywwC9_mUf0Nh7lPDlRxGH3YIxeFwx66oso=.jpeg)
 
@@ -160,11 +160,11 @@ La conséquence de tout ça ? Eh bien maintenant, si je veux contacter une IP in
 
 ### Accès distant
 
-L'accès distant à mon Homelab se faisait avec Wireguard au tout début. Sauf que c'était le wireguard fourni par la Freebox. Sauf que la Freebox sait joindre son réseau (192.168.1.0/24), mais pas les réseaux à l'intérieur (en passant par le Fortigate). J'ai donc passé le FGT en DMZ (zone démilitarisée) ce qui a pour effet de rediriger tout le trafic entrant vers le FGT. Ensuite, j'ai mis en place un VPN IPSec IKEv2 client, qui me sert à me connecter au réseau fédéré, et à accéder à mon homelab même quand je ne suis pas chez moi.
+L'accès distant à mon Homelab se faisait avec Wireguard au tout début, fourni par la Freebox. Sauf que la Freebox sait joindre son réseau (192.168.1.0/24), mais pas les réseaux à l'intérieur (en passant par le Fortigate). J'ai donc passé le FGT en DMZ (zone démilitarisée) ce qui a pour effet de rediriger tout le trafic entrant vers le FGT. Ensuite, j'ai mis en place un VPN IPSec IKEv2 client, qui me sert à me connecter au réseau fédéré, et à accéder à mon homelab même quand je ne suis pas chez moi.
 
 Grâce à ça, je peux accéder à mon homelab de n’importe où, comme si j’étais physiquement chez moi, tout en restant *relativement* protégé des intrusions.
 
-Franchement, je suis un peu embêté par ça.. Aujourd'hui, la Freebox ne me sert plus. C''est un simple routeur en plus qui me permet de me connecter au réseau de l'opérateur. Le problème, c'est que ça consomme ! Il faudrait avoir la possibilité de passer en direct avec son propre routeur, mais ce n'est pas encore dans la mentalité Farançaise à priori. Par contre, en Italie où je suis allé en déplacement professionnel, c'est possible ! Si seulement cette liberté pouvait arriver en France !
+Franchement, je suis un peu embêté par ça.. Aujourd'hui, la Freebox ne me sert plus. C'est un simple routeur en plus qui me permet de me connecter au réseau de l'opérateur. Le problème, c'est que ça consomme ! Il faudrait avoir la possibilité de passer en direct avec son propre routeur, mais ce n'est pas encore dans la mentalité Farançaise à priori. Par contre, en Italie où je suis allé en déplacement professionnel, c'est possible ! Si seulement cette liberté pouvait arriver en France !
 
 ## I need services !
 
