@@ -6,20 +6,6 @@ tags: ["homelab", "proxmox", "fortigate", "sdn", "bgp", "ipsec"]
 thumbnail: /images/2025/08/homelab_background.jpg
 ---
 
-# Avant-propos
-
-Cet article a été écrit sans IA. C'est une règle que je me fais sur ce blog. Je n'ai aucune pression de publication à cet endroit, pas de rémunération, juste une volonté de partager ce que je découvre, fais, conçois.
-
-Ainsi, ce blog est un des derniers bastions où le texte que vous lisez vient d'un humain, avec ses qualités, son style, et ses défauts. Le style n'est pas lissé et puisque l'article est écrit sur plusieurs jours, on peut en trouver des variations.
-
-À travers ces pages, je souhaite vous emmener dans mon univers de **homelabbing** : bricolages réseau, auto-hébergement, virtualisation, domotique, et toutes ces petites expérimentations qui transforment mon quotidien. L’idée est simple : montrer comment, avec quelques équipements et beaucoup de curiosité, on peut apprendre énormément, gagner en autonomie, économiser quelques euros, et surtout… s’amuser.
-
-J'espère que vous prendrez autant de plaisir à me lire que moi à écrire ce billet,
-
-Alexis
-
-***
-
 # Acronymes et Jargon
 
 * FGT - Fortigate : Le pare-feu/routeur de l'installation
