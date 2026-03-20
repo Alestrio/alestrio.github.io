@@ -10,25 +10,25 @@ type: about
 **Passion and curiosity, two words that describe my lifestyle**.
 ----
 
+As an embedded systems engineer in the mechanical industry, I spend part of my time exploring, experimenting, and understanding how systems work – not just technically, but also in the way they are built, maintained, and evolve.
 
-Native of the **Ardennes**, I have always been very curious about the world of science. This led me to discover the digital world and **programming** at a young age. My first language, the one that made me discover algorithms and the way to code, is **Java**.
+This blog was born from the need to put into words what I discover and experiment with. Through projects, trials, errors, and small successes, writing has become a way to clarify my thoughts and keep a record of what truly interests me. It’s not a diary, nor a technical manual, but a space to share what I do and what I learn, at my own pace.
 
-In a high school in Sedan, I obtained a baccalaureate S - Engineering Sciences, which allowed me to satisfy my technical curiosity, through the teaching of **mechanics, electrical engineering and computing**.
+Here, you’ll find notes on my projects, personal experiments, observations on computing, IoT, and self-hosting, as well as occasional digressions about what I discover along the way. Sometimes these are concrete ideas, sometimes broader reflections, but always with the desire to document and share what I find interesting.
 
-I then studied networks and telecommunication sciences at the IUT of Châlons-en-Champagne. \
-I was able to acquire a lot of **network** skills, from basic architectures to operator networks (MPLS, BGP, MP-BGP, VPN-MPLS). \
-I also acquired **programming** skills, highly system-oriented (Python, Powershell...), but also **modern-application-oriented**, with APIs programming (Python). \
-In addition to these skills, there are **system** skills, through the expertise of various services (NGINX, Bind9, Apache, PostgreSQL...) but also of various **technologies**, such as **containerization**, **virtualization**, and **supervision**. \
-Finally, I have acquired some digital signal processing tools, and some electronics notions.
+Each post is a small piece of the puzzle: a mix of technical insight, curiosity, and personal perspective, with the simple goal of understanding, exploring, and leaving a trace.
 
-This year, I joined the **UTC**, an engineering school in Compiègne, in order to improve myself in my system and artificial intelligence skills.
+---------------------------
 
-I am interested in cryptocurrency and **blockchain**, and I think that the applications we have today are very small, compared to the huge potential of this technology.
+What you’ll find here :
 
-In order to share my **discoveries** and my adventures in the digital world, I run this blog, which also serves as my personal website.
+- Personal projects and experiments
+- Notes on computing, IoT, and self-hosting
+- Reflections on ways of thinking and learning
+- Occasional digressions on what I discover or observe
 
-This website is one of my **personal projects**. It is not powered by HTML, but by **Markdown** and uses system and DevOps skills!
+To follow these personal projects, you can find me on GitHub: Alestrio
 
-To discover these personal projects, you can follow me on **GitHub** : [Alestrio](https://github.com/alestrio)
+Enjoy the reading!
 
 Alexis LEBEL

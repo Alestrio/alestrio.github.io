@@ -11,24 +11,25 @@ type: about
 ----
 
 
-Originaire des **Ardennes**, j'ai depuis toujours été très curieux du monde de la technique. Cela m'a ammené assez jeune à découvrir le monde du numérique, et de la **programmation**. Mon premier langage, celui qui m'a fait découvrir l'algorithmie et la manière de coder, est le **Java**.
+Ingénieur en informatique embarquée dans l’industrie mécanique, je passe une partie de mon temps à explorer, expérimenter et comprendre comment les systèmes fonctionnent – pas seulement techniquement, mais dans la manière dont ils se construisent, se maintiennent et évoluent.
 
-Dans un lycée sedanais, j'ai obtenu un bac S - Sciences de l'Ingénieur, qui m'a permis de satisfaire ma curiosité technique, au travers des enseignements de **mécanique, électrotechnique et informatique**.
+Ce blog est né de ce besoin de mettre par écrit ce que je découvre et ce que j’expérimente. Au fil des projets, entre essais, erreurs et petites réussites, écrire est devenu un moyen de clarifier ma pensée et de garder une trace de ce qui m’intéresse vraiment. Ce n’est pas un journal intime, ni un manuel technique, mais un espace pour raconter ce que je fais et ce que j’apprends, à mon rythme.
 
-J'ai ensuite étudié les réseaux et les sciences des télécommunication à l'IUT de Châlons-en-Champagne. \
-J'ai pu y acquérir énormément de compétences **réseau**, des architectures de base, jusqu'aux réseaux opérateurs (MPLS, BGP, MP-BGP, VPN-MPLS). \
-J'y ai aussi acquis des compétences en **programmation**, très orientée système (Python, Powershell..), mais aussi orientée **application moderne**, avec de la programmation d'APIs (Python). \
-A ces compétences, s'ajoutent les compétences **système**, à travers la maîtrise de différents services (NGINX, Bind9, Apache, PostgreSQL...) mais aussi de différentes **technologies**, comme la **conteneurisation**, la **virtualisation**, et la **supervision**. \
-Enfin, j'ai acquis des outils de traitement du signal numérique, et quelques notions d'électronique.
+On y trouve des notes sur mes projets, mes expérimentations personnelles, mes observations sur l’informatique, l’IoT ou l’auto-hébergement, mais aussi quelques digressions sur ce que je découvre en chemin. Parfois, ce sont des idées concrètes, parfois des réflexions plus larges, mais toujours avec l’envie de documenter et partager ce qui me paraît intéressant.
 
-Cette année, j'ai integré en alternance l'**UTC**, une grande école d'ingénieurs à Compiègne, dans le but de me perfectionner dans des domaines orientés système et intelligence artificielle.
+Chaque texte est une petite pièce du puzzle : un mélange de technique, de curiosité et de regard personnel, avec l’objectif simple de comprendre, explorer et laisser une trace.
 
-Je suis passionné par la cryptomonnaie et la **blockchain**, et je pense que les applications que nous en avons aujourd'hui, sont infimes, par rapport au potentiel énorme de cette technologie.
+--------------------
 
-Afin de partager mes **découvertes** et mes aventures dans le monde du numérique, je tiens ce blog, qui me sert aussi de site internet personnel.
+Ce que vous trouverez ici
 
-Ce site est d'ailleurs un de mes **projets personnels**. Il n'est pas alimenté de mon côté par du HTML, mais par du **Markdown** et met à profit des compétences systèmes et DevOps !
+- Projets et expérimentations personnelles
+- Notes sur l’informatique, l’IoT et l’auto-hébergement
+- Réflexions sur la manière de penser et d’apprendre
+- Quelques digressions sur ce que je découvre ou observe
 
 Afin de retrouver ces projets personnels, vous pouvez me suivre sur **GitHub** : [Alestrio](https://github.com/alestrio)
+
+Bonne lecture !
 
 Alexis LEBEL
