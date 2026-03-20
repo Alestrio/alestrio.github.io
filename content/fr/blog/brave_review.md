@@ -2,6 +2,7 @@
 author: "Alexis LEBEL"
 title: "Mon avis sur le navigateur Brave après 4 mois d’utilisation"
 date: 2020-05-10
+draft: true
 tags: ["crypto", "blockchain", "brave", "browser"]
 thumbnail: /images/2020/05/300x100-standard.png
 ---

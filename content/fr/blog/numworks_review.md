@@ -1,6 +1,7 @@
 ---
 author: "Alexis LEBEL"
 title: "La calculatrice Numworks : Avis, et bidouilles"
+draft: true
 date: 2020-03-25
 tags: ["numworks", "calculatrice"]
 #thumbnail: /images/2020/12/automate_1.jpg
