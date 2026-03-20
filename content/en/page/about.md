@@ -29,6 +29,10 @@ What you’ll find here :
 
 To follow these personal projects, you can find me on GitHub: Alestrio
 
+My inspirations :
+
+- [Korben's Blog](https://korben.info)
+
 Enjoy the reading!
 
 Alexis LEBEL

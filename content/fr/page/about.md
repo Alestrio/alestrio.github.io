@@ -30,6 +30,10 @@ Ce que vous trouverez ici
 
 Afin de retrouver ces projets personnels, vous pouvez me suivre sur **GitHub** : [Alestrio](https://github.com/alestrio)
 
+Mes inspirations :
+
+- [Le blog de Korben](https://korben.info)
+
 Bonne lecture !
 
 Alexis LEBEL
