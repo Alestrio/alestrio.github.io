@@ -12,8 +12,8 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Alexis LEBEL"
-      introSubtitle = "IoT Engineer, but mostly a tinkerer"
-      introPhoto = "/images/pp.jpg"
+      introSubtitle = "Systems Engineer, but mostly a tinkerer"
+      introPhoto = "/images/pp.webp"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
@@ -37,7 +37,7 @@ DefaultContentLanguageInSubdir = true
     description = "Think, Tinker, Watch it working !"
     [languages.fr.params]
       introTitle = "Alexis LEBEL"
-      introSubtitle = "Ingénieur IoT dans l'industrie, mais surtout bidouilleur !"
+      introSubtitle = "Ingénieur Systèmes dans l'industrie, mais surtout bidouilleur !"
       introPhoto = "/images/pp.jpg"
     [[languages.fr.menu.main]]
         name = "Blog"
@@ -63,7 +63,7 @@ DefaultContentLanguageInSubdir = true
   enableEmoji = true
 
   # Custom copyright - optional
-  copyright = "Copyright © 2025 - Alexis LEBEL · All rights reserved"
+  copyright = "Copyright © 2026 - Alexis LEBEL · All rights reserved"
   favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
@@ -77,7 +77,7 @@ DefaultContentLanguageInSubdir = true
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
-  description = "Passion-driven engineering student"
+  description = "Scientist, Engineer, Tinkerer, Homelabber"
   twitter = "https://twitter.com/Alestrio0"
   linkedin = "https://www.linkedin.com/in/alexis-lebel/"
   github = "https://github.com/Alestrio"
