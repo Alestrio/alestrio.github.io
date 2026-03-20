@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v5        # Node 24 native (requires runner >= v2.327.1)
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           fetch-depth: 0
@@ -19,11 +19,10 @@ jobs:
         run: |
           curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
             | tar -xz hugo
-          sudo mv hugo /usr/local/bin/hugo
-          hugo version
+          ./hugo version
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6      # ← v6: Node 24 native
+        uses: actions/setup-node@v6
         with:
           node-version: '18'
 
@@ -36,7 +35,7 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          hugo --gc --minify
+          ./hugo --gc --minify
 
           if [ ! -d "public" ]; then
             echo "Erreur: Dossier public non trouvé après build Hugo"
