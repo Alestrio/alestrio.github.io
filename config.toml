@@ -34,7 +34,7 @@ DefaultContentLanguageInSubdir = true
       description = "Think, Tinker, Watch it working !"
       introTitle = "Alexis LEBEL"
       introSubtitle = "Ingénieur Systèmes dans l'industrie, mais surtout bidouilleur !"
-      introPhoto = "/images/pp.jpg"
+      introPhoto = "/images/pp.webp"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
