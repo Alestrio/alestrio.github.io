@@ -6,24 +6,24 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
-    env:
-      # Opt into Node.js 24 now (covers peaceiris/actions-hugo@v3 which is still on Node 16 internally)
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v5        # ← v5: Node.js 24 (requires runner >= v2.327.1)
+        uses: actions/checkout@v5        # Node 24 native (requires runner >= v2.327.1)
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3  # ← v3: latest available
-        with:
-          hugo-version: '0.129.0'
-          extended: true
+        env:
+          HUGO_VERSION: '0.129.0'
+        run: |
+          curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
+            | tar -xz hugo
+          sudo mv hugo /usr/local/bin/hugo
+          hugo version
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4      # ← keep v4 for now (see note below)
+        uses: actions/setup-node@v6      # ← v6: Node 24 native
         with:
           node-version: '18'
 
