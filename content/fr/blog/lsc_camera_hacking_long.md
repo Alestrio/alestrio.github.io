@@ -12,7 +12,7 @@ thumbnail: https://picsum.photos/id/1050/400/250
 
 Cet article existe aussi en version courte (lien)
 
-# 0. Transparence - Utilisation de l'IA
+# Transparence - Utilisation de l'IA
 
 L'intelligence artificielle a été utilisée pour aider lors de l'enquête et de la rédaction de cet article, dans les cas suivants :
 
@@ -23,142 +23,80 @@ L'intelligence artificielle a été utilisée pour aider lors de l'enquête et d
 
 # Introduction
 
-Les objets connectés grand public exposent rarement une frontière nette entre fonctionnalités locales et dépendances distantes. Dans le cas des caméras IP compatibles Tuya, cette ambiguïté est particulièrement visible : l’équipement propose un flux RTSP accessible sur le réseau local, tout en maintenant en parallèle des connexions sortantes vers l’infrastructure cloud du constructeur. Cette double nature soulève une question simple : dans quelle mesure peut-on conserver les fonctions locales utiles tout en réduisant, ou au moins en caractérisant, la surface de communication externe ?
+Les **objets connectés grand public** exposent rarement une frontière nette entre **fonctionnalités locales** et **dépendances distantes**. Le cas des **caméras IP compatibles Tuya** l’illustre assez bien : pour une vingtaine d’euros chez Action, on trouve une **caméra LSC 1080P** capable de fournir un **flux RTSP** sur le réseau local, tout en maintenant en parallèle des **connexions sortantes** vers l’infrastructure cloud du constructeur. L’objectif de départ est donc simple : **rendre locale une caméra pensée pour le cloud**.
 
-Cet article présente l’analyse d’une caméra LSC 1080P basée sur un SoC Fullhan et un environnement Linux embarqué. L’accès root, obtenu via telnet, permet d’observer le système en fonctionnement, d’identifier le rôle central du processus `dgiot`, de cartographier les connexions réseau, puis d’extraire et d’étudier le firmware. L’objectif n’est pas de proposer un contournement générique du cloud Tuya, mais de documenter une démarche expérimentale : comprendre les mécanismes d’initialisation, distinguer les services locaux des composants cloud, tester des modifications en runtime, et évaluer les risques associés à une modification persistante du rootfs.
+Cet article présente l’analyse d’une **caméra LSC 1080P** basée sur un **SoC Fullhan** et un environnement **Linux embarqué**. Le but n’est pas de proposer une méthode universelle de suppression du cloud Tuya, mais de documenter une **démarche expérimentale et reproductible** : obtenir un **accès système**, observer le **comportement réseau**, sauvegarder les **partitions**, extraire le **firmware**, identifier les **composants critiques**, puis tester les modifications **en runtime** avant toute tentative persistante.
 
-L’analyse met rapidement en évidence plusieurs contraintes classiques des systèmes embarqués fermés : partition racine SquashFS en lecture seule, configuration persistante limitée à une zone JFFS2, watchdog matériel alimenté par l’application principale, scripts d’initialisation non modifiables directement, et dépendances fortes entre le processus applicatif, le RTSP local, le cloud, l’audio/vidéo et les mécanismes de supervision. Ces contraintes imposent une approche prudente : avant tout flash, les patchs sont testés en mémoire ou depuis la carte SD, afin de vérifier leur impact réel sur la stabilité de la caméra.
+La contrainte principale est que le processus applicatif central, **`dgiot`**, concentre plusieurs responsabilités : services **audio/vidéo**, **RTSP local**, **communication cloud**, logique applicative **Tuya** et alimentation du **watchdog matériel**. Une modification trop brutale peut donc entraîner une perte du **flux local**, un **reboot**, voire une caméra inutilisable. La démarche retenue consiste à avancer par étapes : conserver l’**accès local**, garder le **RTSP fonctionnel**, identifier les **connexions réellement établies**, tester les **blocages ou patchs** sans modifier immédiatement le firmware, puis ne **flasher** qu’après validation.
 
-Nous verrons ainsi comment l’observation réseau conduit à une première stratégie de blocage par routes locales, pourquoi un simple filtrage externe ne suffit pas toujours, comment le binaire `dgiot` peut être analysé, et comment certains appels liés au P2P ou au stockage cloud Tuya peuvent être identifiés comme cibles de patch potentielles. Enfin, l’article aborde le passage plus sensible vers l’accès U-Boot par UART, obtenu en exploitant le comportement de démarrage de la flash SPI, étape nécessaire pour envisager une reprise de contrôle plus durable du firmware.
+L’analyse met rapidement en évidence plusieurs contraintes classiques des **systèmes embarqués fermés** : partition racine **SquashFS en lecture seule**, configuration persistante limitée à une zone **JFFS2**, scripts d’initialisation non modifiables directement, **watchdog matériel**, et **bootloader** accessible seulement sous conditions. Ces éléments imposent une approche prudente, où chaque hypothèse doit être vérifiée sur le système réel avant d’être transformée en **patch**.
 
-# 1. Objectif et contexte
+Nous verrons ainsi comment l’**observation réseau** conduit à une première stratégie de blocage par **routes locales**, pourquoi un simple **filtrage externe** ne suffit pas toujours, comment le binaire **`dgiot`** peut être analysé, et comment certains appels liés au **P2P** ou au **stockage cloud Tuya** peuvent être identifiés comme cibles potentielles. Enfin, l’article aborde le passage plus sensible vers l’accès **U-Boot par UART**, obtenu en exploitant le comportement de démarrage de la **flash SPI**, étape nécessaire pour envisager une reprise de contrôle plus durable du firmware.
 
-# 1.1 Objectif
 
-Objectif de départ :
+# Base de départ : caméra connue, accès root et RTSP local
 
-- conserver l’accès local à la caméra ;
-- empêcher ou limiter l’envoi de flux vidéo vers l’extérieur ;
-- garder assez de connectivité cloud pour que la caméra reste utilisable dans son écosystème ;
-- intégrer un snapshot dans Home Assistant, alors que la caméra ne fournit pas d’URL snapshot HTTP native.
+Avant de commencer l’analyse, il faut préciser que cette caméra n’est pas un matériel totalement inconnu. Plusieurs travaux existants documentent déjà une partie de son fonctionnement, notamment l’activation de telnet, l’existence d’un flux RTSP local et certaines propriétés du firmware.
 
-Caméra concernée :
+La caméra étudiée est une **LSC Smart Connect 1080P**, vendue chez Action et intégrée à l’écosystème **Tuya**. Les analyses précédentes indiquent une plateforme basée sur un **SoC Fullhan FH8626V100**, avec un noyau **Linux 4.9.129**, un firmware de la branche **7.6.x**, et une architecture **ARMv7 32 bits little-endian**.
 
-- caméra LSC Action / Tuya compatible ;
-- flux RTSP local exposé ;
-- accès root obtenu via telnet grâce aux travaux du dépôt guino/LSC1080P ;
-- accès au prompt U-Boot obtenu via UART en s’appuyant sur le tutoriel berobloom/LSCIndoorCameraLocal1080p, qui décrit la perturbation temporaire de la flash SPI au démarrage.
+Deux ressources servent de point de départ :
 
-# 2. Base de départ : caméra connue, accès root et RTSP local
+* l’article d’Alexander Bilz, qui documente l’accès système, les ports exposés et plusieurs caractéristiques du firmware ;
+* le dépôt `guino/LSC1080P`, qui fournit notamment la méthode d’activation de telnet via un fichier `product.cof`.
 
-## 2.1 Article d’Alexander Bilz
+Une troisième ressource, le dépôt `berobloom/LSCIndoorCameraLocal1080p`, sera utilisée plus loin pour l’accès au **prompt U-Boot**. Cette méthode repose sur une interruption du démarrage normal en court-circuitant temporairement deux broches de la **flash SPI**, ce qui permet de reprendre la main avant le boot Linux.
 
-Points à reprendre :
+## 2.1 Activation de telnet
 
-- caméra vendue par Action, basée sur Tuya ;
-- CPU FH8626V100 ;
-- firmware 7.6.32 ;
-- kernel Linux 4.9.129 ;
-- architecture ARMv7 32-bit little endian ;
+L’accès root s’obtient en plaçant un fichier `product.cof` sur la carte SD de la caméra. Son contenu minimal est le suivant :
 
-ports observés :
-
-- 80/tcp
-- 835/tcp
-- 6668/tcp
-- 8554/tcp, RTSP alternatif ;
-- présence de dgiot ;
-- rootfs SquashFS + partitions JFFS2 ;
-- accès telnet activable ;
-- mot de passe root connu : dgiot010.
-
-## 2.2 Dépôt guino/LSC1080P
-
-- Points importants :
-- activation telnet via un fichier product.cof sur carte SD ;
-
-login :
-
-- utilisateur : root
-- mot de passe : dgiot010
-
-RTSP disponible nativement :
-
-- rtsp://IP:8554/main
-- rtsp://IP:8554/sub
-- pas de snapshot natif facile type snap.cgi;
-- pas de mécanisme simple trouvé pour exécuter automatiquement un script custom au boot sans modifier le firmware ;
-- recommandation du dépôt : lancer les scripts depuis une machine externe via telnet, par exemple avec initcheck.sh.
-
-## 2.3 Dépôt berobloom/LSCIndoorCameraLocal1080p
-
-Source utilisée pour la partie UART / U-Boot :
-
-- https://github.com/berobloom/LSCIndoorCameraLocal1080p
-
-Ce tutoriel documente notamment :
-
-- l’ouverture de la caméra ;
-- le repérage des points UART ;
-- l’accès au boot log via liaison série ;
-- le contournement du `bootdelay=0` de U-Boot ;
-- l’obtention du prompt U-Boot en court-circuitant brièvement deux broches de la flash SPI au démarrage ;
-- les commandes U-Boot utiles pour sauvegarder, reconstruire et reflasher l’image.
-
-Dans cette enquête, cette source a surtout servi à débloquer l’accès au prompt U-Boot. Le principe retenu n’était pas de suivre aveuglément le patch complet proposé par le dépôt, mais d’utiliser la méthode d’accès bas niveau pour pouvoir flasher notre propre rootfs modifié.
-
-## 2.4 Activation telnet
-
-Créer sur la carte SD un fichier product.cof :
-
-```sh
+```ini
 [DEFAULT_SETTING]
 telnet=1
 ```
 
-Insérer la carte SD, redémarrer la caméra, puis se connecter :
+Après insertion de la carte SD et redémarrage de la caméra, un serveur telnet est lancé. La connexion se fait ensuite depuis le réseau local :
 
 ```sh
 telnet 192.168.1.12
 ```
 
-Identifiants :
+Les identifiants connus sont :
 
-```sh
+```text
 login: root
 password: dgiot010
 ```
 
-## 2.5 Vérification système
+Cet accès donne un shell root sur le système embarqué. C’est le point d’entrée principal pour observer le comportement runtime de la caméra, inspecter les processus, vérifier les ports ouverts, lire les partitions MTD et tester des modifications non persistantes.
 
-Commandes exécutées sur la caméra :
+## 2.2 Flux RTSP local
 
-```sh
-netstat -tupn
-ifconfig
-route -n
-df -h
-cat /etc/inittab
-cat /etc/init.d/rcS
+La caméra expose également un flux **RTSP local** sur le port `8554`. Deux flux sont disponibles :
+
+```text
+rtsp://192.168.1.12:8554/main
+rtsp://192.168.1.12:8554/sub
 ```
 
-Résultat observé côté réseau :
+Le flux `main` correspond au flux principal, tandis que `sub` fournit un flux secondaire, généralement plus léger.
 
-wlan0 inet addr:192.168.1.12 Mask:255.255.255.0
+Ce point est important pour l’objectif de l’analyse : la caméra possède déjà une fonction vidéo locale exploitable sans passer directement par l’application mobile. L’enjeu n’est donc pas de créer un accès vidéo local à partir de zéro, mais de préserver ce flux tout en comprenant et en limitant les communications cloud.
 
-Route par défaut :
 
-```sh
-Destination     Gateway         Genmask         Flags Iface
-0.0.0.0         192.168.1.253   0.0.0.0         UG    wlan0
-192.168.1.0     0.0.0.0         255.255.255.0   U     wlan0
-```
+## 2.4 Contraintes immédiates
 
-Conclusion :
+Les premières observations montrent plusieurs contraintes structurantes :
 
-la caméra utilise bien 192.168.1.253 comme passerelle IPv4 ;
+* le système racine est monté en **lecture seule** ;
+* la partition persistante modifiable est située sous `/etc/conf` ;
+* les scripts d’initialisation classiques ne peuvent pas être modifiés directement ;
+* le processus `dgiot` est nécessaire au fonctionnement global de la caméra ;
+* un watchdog matériel provoque un redémarrage si l’application principale ne l’alimente plus correctement.
 
-dans ce cas, 192.168.1.253 correspond au FortiGate ;
+Ces contraintes expliquent la stratégie retenue pour la suite : ne pas modifier immédiatement le firmware, mais commencer par observer le système en fonctionnement, sauvegarder les partitions, puis tester les modifications depuis des zones temporaires ou depuis la carte SD.
+
 
 # 3. Observation réseau : RTSP local, cloud Tuya et limites du filtrage externe
 
@@ -2446,7 +2384,9 @@ tcp        0      0 0.0.0.0:23              0.0.0.0:* LISTEN      136/telnetd
 
 Puis :
 
+```bash
 # netstat -an 2>/dev/null | grep -E '8554|554|80|6667|8883|1443'
+```
 
 ne retourne rien pour 8554, 554 ou 80.
 
