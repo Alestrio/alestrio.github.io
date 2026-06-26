@@ -11,6 +11,10 @@ thumbnail: https://picsum.photos/id/1050/400/250
 
 Cet article existe aussi en version courte (lien)
 
+# Table des matières
+
+{{ .TableOfContents }}
+
 # 0. Transparence - Utilisation de l'IA
 
 L'intelligence artificielle a été utilisée pour aider lors de l'enquête et de la rédaction de cet article, dans les cas suivants :
@@ -20,6 +24,15 @@ L'intelligence artificielle a été utilisée pour aider lors de l'enquête et d
 - Mise en forme du plan détaillé de l'article à partir de notes de brouillon et de snippets de code
 - Rephrasage, correction orthographique et grammaticale
 
+# Introduction
+
+Les objets connectés grand public exposent rarement une frontière nette entre fonctionnalités locales et dépendances distantes. Dans le cas des caméras IP compatibles Tuya, cette ambiguïté est particulièrement visible : l’équipement propose un flux RTSP accessible sur le réseau local, tout en maintenant en parallèle des connexions sortantes vers l’infrastructure cloud du constructeur. Cette double nature soulève une question simple : dans quelle mesure peut-on conserver les fonctions locales utiles tout en réduisant, ou au moins en caractérisant, la surface de communication externe ?
+
+Cet article présente l’analyse d’une caméra LSC 1080P basée sur un SoC Fullhan et un environnement Linux embarqué. L’accès root, obtenu via telnet, permet d’observer le système en fonctionnement, d’identifier le rôle central du processus `dgiot`, de cartographier les connexions réseau, puis d’extraire et d’étudier le firmware. L’objectif n’est pas de proposer un contournement générique du cloud Tuya, mais de documenter une démarche expérimentale : comprendre les mécanismes d’initialisation, distinguer les services locaux des composants cloud, tester des modifications en runtime, et évaluer les risques associés à une modification persistante du rootfs.
+
+L’analyse met rapidement en évidence plusieurs contraintes classiques des systèmes embarqués fermés : partition racine SquashFS en lecture seule, configuration persistante limitée à une zone JFFS2, watchdog matériel alimenté par l’application principale, scripts d’initialisation non modifiables directement, et dépendances fortes entre le processus applicatif, le RTSP local, le cloud, l’audio/vidéo et les mécanismes de supervision. Ces contraintes imposent une approche prudente : avant tout flash, les patchs sont testés en mémoire ou depuis la carte SD, afin de vérifier leur impact réel sur la stabilité de la caméra.
+
+Nous verrons ainsi comment l’observation réseau conduit à une première stratégie de blocage par routes locales, pourquoi un simple filtrage externe ne suffit pas toujours, comment le binaire `dgiot` peut être analysé, et comment certains appels liés au P2P ou au stockage cloud Tuya peuvent être identifiés comme cibles de patch potentielles. Enfin, l’article aborde le passage plus sensible vers l’accès U-Boot par UART, obtenu en exploitant le comportement de démarrage de la flash SPI, étape nécessaire pour envisager une reprise de contrôle plus durable du firmware.
 
 # 1. Objectif et contexte
 
