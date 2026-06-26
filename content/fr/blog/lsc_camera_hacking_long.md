@@ -4,16 +4,13 @@ title: "LSC 1080P : autopsie d’une caméra cloud Tuya trop bavarde"
 date: 2026-06-25
 lastmod: 2026-06-25
 draft: true
+toc: true
 description: "accès root, RTSP local, analyse du firmware, watchdog, U-Boot et premiers patchs pour reprendre le contrôle face au cloud."
 tags: ["hardware-hacking", "reverse-engineering", "tuya", "lsc-1080p", "camera-ip", "firmware", "u-boot", "spi-flash", "linux-embarque", "rtsp", "watchdog", "iot-security", "cybersecurite", "homelab"]
 thumbnail: https://picsum.photos/id/1050/400/250
 ---
 
 Cet article existe aussi en version courte (lien)
-
-# Table des matières
-
-{{ .TableOfContents }}
 
 # 0. Transparence - Utilisation de l'IA
 
